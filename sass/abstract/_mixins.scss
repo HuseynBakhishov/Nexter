@@ -1,0 +1,30 @@
+//xlarge = 75em / 1200px;
+//large = 62.5em / 1000px;
+//medium = 50em / 800px
+//small = 37.5em / 600px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xlarge {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+}
